@@ -1,1 +1,14 @@
 
+{
+  "business_name": "Draven Blades Solutions",
+  "owner": "John E. Hillman Jr.",
+  "system_version": "2.0.0",
+  "total_agents": 20,
+  "hosting_provider": "Oracle Cloud",
+  "payment_gateways": ["Stripe", "Google Wallet"],
+  "restricted_methods": ["PayPal", "Cash App"],
+  "theme_settings": {
+    "primary": "Obsidian",
+    "accent": "Metallic Purple"
+  }
+}
