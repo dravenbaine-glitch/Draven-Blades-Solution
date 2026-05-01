@@ -1,1 +1,13 @@
 
+export default function DravenBladesOS() {
+  return (
+    <div style={{ backgroundColor: '#0a0a0a', color: '#b300ff', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
+      <h1 style={{ textShadow: '0 0 20px #e600ff', fontSize: '2.5rem' }}>DRAVEN BLADES SOLUTIONS</h1>
+      <p style={{ letterSpacing: '2px', color: '#e600ff' }}>OWNER: JOHN E. HILLMAN JR.</p>
+      <div style={{ border: '1px solid #b300ff', padding: '20px', marginTop: '20px', boxShadow: '0 0 10px #7a00ff' }}>
+        20 AGENT ECOSYSTEM: ONLINE
+      </div>
+    </div>
+  );
+}
+Once you hit commit, that folder will be officially "alive" in your structure. After that, we c
