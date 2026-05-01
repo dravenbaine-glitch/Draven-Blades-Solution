@@ -1,1 +1,33 @@
 
+{
+  "business": {
+    "name": "Draven Blades Solutions",
+    "owner": "John E. Hillman Jr.",
+    "mission": "Automated AI Agentic Ecosystem"
+  },
+  "ecosystem": {
+    "total_specialized_agents": 20,
+    "primary_agents": [
+      "Sales",
+      "Lead Gen",
+      "Maintenance",
+      "Synapse"
+    ],
+    "hosting": "Oracle Cloud"
+  },
+  "payment_integration": {
+    "enabled_methods": [
+      "Stripe",
+      "Google Wallet"
+    ],
+    "prohibited_methods": [
+      "PayPal",
+      "Cash App"
+    ]
+  },
+  "visual_identity": {
+    "theme": "Obsidian",
+    "accent": "Metallic Purple",
+    "glow_mode": "Enabled"
+  }
+}
