@@ -1,13 +1,62 @@
+"use client";
 
-export default function DravenBladesOS() {
+import React, { useState, useEffect } from 'react';
+import { Shield, Zap, Activity, Database } from 'lucide-react';
+
+export default function NexusCore() {
+  const [activeAgents, setActiveAgents] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveAgents(prev => (prev < 20 ? prev + 1 : 20));
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div style={{ backgroundColor: '#0a0a0a', color: '#b300ff', minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', textAlign: 'center' }}>
-      <h1 style={{ textShadow: '0 0 20px #e600ff', fontSize: '2.5rem' }}>DRAVEN BLADES SOLUTIONS</h1>
-      <p style={{ letterSpacing: '2px', color: '#e600ff' }}>OWNER: JOHN E. HILLMAN JR.</p>
-      <div style={{ border: '1px solid #b300ff', padding: '20px', marginTop: '20px', boxShadow: '0 0 10px #7a00ff' }}>
-        20 AGENT ECOSYSTEM: ONLINE
-      </div>
+    <div className="min-h-screen bg-black text-white p-8">
+      <div className="fixed inset-0 bg-gradient-to-br from-purple-900/20 via-violet-900/10 to-pink-900/20 pointer-events-none" />
+      <main className="relative z-10">
+        <header className="flex justify-between items-center mb-12 border-b border-purple-500/30 pb-6">
+          <h1 className="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-violet-400 to-pink-400">
+            DRAVEN BLADES SOLUTIONS
+          </h1>
+          <div className="flex items-center gap-4 bg-purple-900/20 p-3 rounded-full border border-pink-500/30">
+            <Shield className="text-pink-400 w-5 h-5" />
+            <span className="text-xs font-mono uppercase">Nexus Core: Active</span>
+          </div>
+        </header>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="bg-black/50 border border-purple-500/20 p-6 rounded-2xl">
+            <div className="flex items-center justify-between mb-4">
+              <Zap className="text-purple-400" />
+              <span className="text-2xl font-bold text-pink-400">{activeAgents}/20</span>
+            </div>
+            <h3 className="text-lg font-semibold mb-2">Agent Sync</h3>
+            <p className="text-gray-400 text-sm">Autonomous logic loops maintaining state.</p>
+          </div>
+
+          <div className="bg-black/50 border border-violet-500/20 p-6 rounded-2xl">
+            <Activity className="text-violet-400 mb-4" />
+            <h3 className="text-lg font-semibold mb-2">System Pulse</h3>
+            <div className="h-1 w-full bg-gray-800 rounded-full overflow-hidden">
+              <div className="h-full bg-gradient-to-r from-purple-500 to-pink-500" style={{ width: '100%' }} />
+            </div>
+          </div>
+
+          <div className="bg-black/50 border border-pink-500/20 p-6 rounded-2xl">
+            <Database className="text-pink-400 mb-4" />
+            <h3 className="text-lg font-semibold mb-2">Lead Engine</h3>
+            <p className="text-gray-400 text-sm">B2B extraction active.</p>
+          </div>
+        </div>
+
+        <div className="bg-zinc-950 border border-white/5 p-4 rounded-lg font-mono text-xs text-violet-300">
+          <p className="mb-1 text-pink-400">[SYSTEM] Initialization complete...</p>
+          <p className="mb-1">[SYNC] 20-Agent ecosystem pulsing.</p>
+        </div>
+      </main>
     </div>
   );
 }
-Once you hit commit, that folder will be officially "alive" in your structure. After that, we c
