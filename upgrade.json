@@ -1,1 +1,13 @@
 
+{
+  "evolution_protocol": "Synapse-Alpha",
+  "version": "2.0.1",
+  "auto_upgrade": true,
+  "living_ratio_target": 0.618,
+  "sync_interval": "6:30AM",
+  "agent_directives": {
+    "self_heal": "active",
+    "memory_retention": "E:/Nexus_Core_OS/logs",
+    "redundancy_check": "enabled"
+  }
+}
