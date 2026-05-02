@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Draven Blades Solutions",
@@ -16,7 +15,7 @@ export default function RootLayout({
       <body style={{ 
         margin: 0, 
         background: "#000", 
-        overflow: "hidden",
+        overflow: "hidden", 
         cursor: "none" 
       }}>
         {children}
